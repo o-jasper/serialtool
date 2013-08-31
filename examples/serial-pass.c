@@ -1,4 +1,3 @@
-
 //Written by Jasper den Ouden
 //Released into the public domain
 
