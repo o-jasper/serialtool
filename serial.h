@@ -2,7 +2,7 @@
 // serialtool
 //
 // Created by Árpád Goretity on 18/02/2012.
-//  (trivial modifications by Jasper den Ouden)
+//  (modifications/additions by Jasper den Ouden)
 // Released into the pulic domain
 
 #ifndef __SERIAL_H__ //TODO no #pragma once?
@@ -33,6 +33,12 @@ uint8_t serial_recv(int fd);
 
 // Writes a single character to the serial port file descriptor `fd'.
 void serial_send(int fd, uint8_t byte);
+
+// Corresponds one of the given termios.h baud rates to a given one.
+// returns -1 if it doesnt exist.
+int identify_baud(int i);
+// `identify_baud` for strings; `identify_baud(atoi(str))`
+int identify_baud_str(const char* str);
 
 #ifdef __cplusplus
 }
