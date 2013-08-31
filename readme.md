@@ -10,13 +10,15 @@ examples.
 input argument. The function returns an integer that refers to this file,
 henceforth called `fd`.
 
-`Serial.available()`, `Serial.read`, `Serial.write` *dont* quite correspond.
+`Serial.available()`, `Serial.read()`, `Serial.write()` *dont* quite correspond.
 Instead of first looking if it is already there, `read(fd,buffer,want_length)`,
-and the same for `write` returns the number of bytes received. To get data, 
-you run until you have some portion you can use.
+and the same for `write()` returns the number of bytes received/sent. To get data, 
+you run until you have(sent) some portion you can use.
 
 ### TODO
 * Add 'portion getter' to automate that for the user?
+* It seems that the arduino resets on closing, would be nicer if the user had
+  the option not to.
 
 ## License
 Released into the public domain.

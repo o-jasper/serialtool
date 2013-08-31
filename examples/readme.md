@@ -1,5 +1,3 @@
-Example.. So not for real use that much. 
-
 Operates basically like the arduino serial monitor, but of course it is just an
 example.
 
