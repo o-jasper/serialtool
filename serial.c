@@ -6,6 +6,8 @@
 
 #include "serial.h"
 
+// Credit to Árpád Goretity for this function. 
+// If you dont know much about it, this sort of thing is hard to figure out.
 int serial_open(const char *device, int baud)
 {	
     struct termios tio;
